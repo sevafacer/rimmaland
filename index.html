@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<title>RimmaDesign</title>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<a href="#main">
+				<div class="logo"> Rimma </div>
+			</a>
+			<ul class="nav-ul">
+				<li class="nav-item">
+					<a href="#about" class="nav-link" id="nav-link-1">Информация </a>
+				</li>
+				<li class="nav-item">
+					<a href="#price" class="nav-link" id="nav-link-2">Услуги</a>
+				</li>
+				<li class="nav-item">
+					<a href="#portfolio" class="nav-link" id="nav-link-3">Портфолио</a>
+				</li>
+				<li class="nav-item">
+					<a href="#contacts" class="nav-link" id="nav-link-4">Контакты</a>
+				</li>
+			</ul>
+			<div class="number">
+				<i><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+						<path fill="#3f3f3f"
+							d="M391 480c-19.52 0-46.94-7.06-88-30-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0128.64-15.2c1-.43 1.93-.84 2.76-1.21 4.95-2.23 12.45-5.6 21.95-2 6.34 2.38 12 7.25 20.86 16 18.17 17.92 43 57.83 52.16 77.43 6.15 13.21 10.22 21.93 10.23 31.71 0 11.45-5.76 20.28-12.75 29.81-1.31 1.79-2.61 3.5-3.87 5.16-7.61 10-9.28 12.89-8.18 18.05 2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47 1.48-1.13 3-2.3 4.59-3.47 10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18 18 9.08 59.11 33.59 77.14 51.78 8.77 8.84 13.66 14.48 16.05 20.81 3.6 9.53.21 17-2 22-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 01-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 01391 480z" />
+					</svg>
+				</i>
+				<a href="tel:+79200141157">+7 (920) 014-11-57</a>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<section class="main" id="main">
+			<div class="div-main-1">
+				<h1 class="name">Rimma <br> Design</h1>
+				<h5 class="namedesc">Дизайнер вашего интерьера</h5>
+				<button class="main-button" id="main-button">Заказать проект</button>
+				<div id="call_me" class="call_me">
+					<div class="call-me-content">
+						<span class="close" id="close"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon"
+								viewBox="0 0 512 512">
+								<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+									d="M368 368L144 144M368 144L144 368" /></svg></span>
+						<div class="sod">
+							<h2>Оставьте заявку</h2>
+							<p>В ближайшее время я вам перезвоню и проведу констультацию, договорюсь о дате и времени выезда к вам.
+							</p>
+							<form method="post" class="call-me__form">
+								<label for="name_call"><input type="text" id="name_call" name="name_call" autocomplete="first-name" required placeholder="Ваше Имя">
+								</label>
+								<label for="phone_call">
+									<i class="phone-call_phone-icon"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon"
+											fill="#B5B3BF" viewBox="0 0 512 512">
+											<path
+												d="M391 480c-19.52 0-46.94-7.06-88-30-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0128.64-15.2c1-.43 1.93-.84 2.76-1.21 4.95-2.23 12.45-5.6 21.95-2 6.34 2.38 12 7.25 20.86 16 18.17 17.92 43 57.83 52.16 77.43 6.15 13.21 10.22 21.93 10.23 31.71 0 11.45-5.76 20.28-12.75 29.81-1.31 1.79-2.61 3.5-3.87 5.16-7.61 10-9.28 12.89-8.18 18.05 2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47 1.48-1.13 3-2.3 4.59-3.47 10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18 18 9.08 59.11 33.59 77.14 51.78 8.77 8.84 13.66 14.48 16.05 20.81 3.6 9.53.21 17-2 22-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 01-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 01391 480z" />
+										</svg></i>
+									<span class="phone-call_phone-preffics">+7</span>
+									<input type="tel" id="phone_call" name="phone_call" pattern="[0-9]{10}" autocomplete="tel-national" required="required"  maxlength="10" minlength="10"  value="" placeholder="(900) 900-20-20">
+								</label>
+								<button class="call_for">Позвоните мне</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="div-main-2">
+				<div class="first_img main-picture">
+					<img src="images\main\1.jpg" alt="main_1" width="70%">
+				</div>
+				<div class="second_img main-picture">
+					<img src="images\main\2.jpg" alt="main_2" width="90%">
+				</div>
+				<div class="third_img main-picture">
+					<img src="images\main\3.jpg" alt="main_3" width="65%">
+				</div>
+				<div class="fourth_img main-picture">
+					<img src="images\main\4.jpg" alt="main_4" width="60%">
+				</div>
+			</div>
+		</section>
+		<section class="about" id="about">
+			<div class="div-about-1">
+				<h2 class="typing" id="typing">Обо мне</h2>
+				<p class="text"> Добрый день! Я - дизайнер Ваших интерьеров. Работаю вместе с командой профессиональных
+					строителей. Миссия
+					нашей компании - помочь людям сделать ремонт легко и получить удовольствие от процесса.
+					Мы подходим к работе со всей душой и необходимыми техническими знаниями.
+					Главное — результат. Делаю не просто красивые концепты, а, в первую очередь, функциональные и стильные
+					интерьеры для жизни. Умею слышать и понимать своих заказчиков, поэтому со мной легко и приятно работать. В
+					любом проекте
+					отталкиваюсь от Ваших пожеланий и предпочтений.</p>
+				<div class="divplus">
+					<div class="plus">
+						<p class="numberplus">10</p>
+						<p class="plus_desc">лет опыта</p>
+					</div>
+					<div class="plus">
+						<p class="numberplus">70+</p>
+						<p class="plus_desc">проектов</p>
+					</div>
+					<div class="plus">
+						<p class="numberplus">60+</p>
+						<p class="plus_desc">ремонтов</p>
+					</div>
+				</div>
+				<div class="pint">
+					<p>Я на <a href="">Pinterest</a></p>
+				</div>
+			</div>
+			<div class="div-about-2">
+				<img class="ProfilePhoto" src="images\about\infophoto.jpg" alt="ProfilePhoto">
+			</div>
+		</section>
+		<section class="price" id="price">
+			<div class="el-1">
+				<h2>Подберите подходящую для вас услугу</h2>
+			</div>
+			<div class="serv">
+				<div class="pricediv left">
+					<div class="el-2">
+						<h3>Технический проект</h3>
+						<div class="vectorprice"><object type="image/svg+xml" data="icons\price\texn.svg"></object></div>
+					</div>
+					<div class="el-3">
+						<ul>
+							<li>Составление технического задания</li>
+							<li>Планировочные решения</li>
+							<li>Планы демонтажа и монтажа</li>
+							<li>План электрики</li>
+						</ul>
+						<div class="cost">
+							<i class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+									<path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z"
+										fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+										stroke-width="32" d="M220 220h32v116" />
+									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+										stroke-width="32" d="M208 340h88" />
+									<path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z" /></svg></i>
+							<div class="costnumb">1000</div>р/м<sup>2</sup>
+						</div>
+					</div>
+				</div>
+				<hr>
+			</div>
+			<div class="serv">
+				<div class="pricediv left">
+					<div class="el-4">
+						<h3>Базовый проект</h3>
+						<div class="vectorprice"><object type="image/svg+xml" data="icons\price\base.svg"></object></div>
+					</div>
+					<div class="el-5">
+						<ul>
+							<li>Составление технического задания</li>
+							<li>Планировочные решения</li>
+							<li>Планы демонтажа и монтажа</li>
+							<li>План электрики</li>
+							<li>Развертки стен, полов, потолков</li>
+							<li>3D визуализация</li>
+						</ul>
+						<div class="cost">
+							<i class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+									<path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z"
+										fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+										stroke-width="32" d="M220 220h32v116" />
+									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+										stroke-width="32" d="M208 340h88" />
+									<path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z" /></svg></i>
+							<div class="costnumb">2500 </div>р/м<sup>2</sup>
+						</div>
+					</div>
+				</div>
+				<hr>
+			</div>
+			<div class="serv">
+				<div class="pricediv left">
+					<div class="el-6">
+						<h3>Полный проект</h3>
+						<div class="vectorprice"><object type="image/svg+xml" data="icons\price\full.svg"></object></div>
+					</div>
+					<div class="el-7">
+						<ul>
+							<li>Составление технического задания</li>
+							<li>Планировочные решения</li>
+							<li>Планы демонтажа и монтажа</li>
+							<li>План электрики</li>
+							<li>3D визуализация</li>
+							<li>Комплектация</li>
+						</ul>
+						<div class="cost">
+							<i class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+									<path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z"
+										fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+										stroke-width="32" d="M220 220h32v116" />
+									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+										stroke-width="32" d="M208 340h88" />
+									<path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z" /></svg></i>
+							<div class="costnumb">5000 </div>р/м<sup>2</sup>
+						</div>
+					</div>
+				</div>
+				<hr>
+			</div>
+			<div class="serv">
+				<div class="pricediv left">
+					<div class="el-8">
+						<h3>Авторский надзор</h3>
+						<div class="vectorprice"><object type="image/svg+xml" data="icons\price\avtor.svg"></object></div>
+					</div>
+					<div class="el-9">
+						<p>В рамках надзора осуществляется контроль за ходом
+							строительных работ и закупка чистовых материалов</p>
+						<div class="cost">
+							<i class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+									<path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z"
+										fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+										stroke-width="32" d="M220 220h32v116" />
+									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+										stroke-width="32" d="M208 340h88" />
+									<path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z" /></svg></i>
+							<div class="costnumb">25000 </div>р/мес
+						</div>
+					</div>
+				</div>
+				<hr>
+			</div>
+		</section>
+		<section class="vr360" id="vr360">
+			<div class="vr-1">
+				<object type="image/svg+xml" data="icons\main\360_view_ibivag7cow6n.svg"></object>
+				<h2>360<sup>o</sup> и VR-обзор вашего будущего интерьера</h2>
+			</div>
+			<div class="vr-2">
+				<div class="div360-text">
+					<p>Также дополнительно вы можете получить ссылку на 360<sup>o</sup> и VR-обзор вашего дома.
+						Здесь можно ознакомиться с примером.</p>
+				</div>
+				<div class="div360-qr">
+					<a class="qr" href="https://api2.enscape3d.com/v3/view/b7ff3766-69ab-4484-9388-49b4330b8ed7"><img
+							src="images\vr\QR1.png"></a>
+					<a class="qr" href="https://api2.enscape3d.com/v3/view/7c54e500-0798-4e59-b044-e176aabe78fc"><img
+							src="images\vr\Qr2.png"></a>
+				</div>
+			</div>
+			<div class="vr-3">
+				<p class="small">*Вы можете навести камеру на QR-код или просто перейти по ссылке</p>
+			</div>
+		</section>
+		<section class="portfolio" id="portfolio">
+			<h2>Выполненные проекты</h2>
+
+			<div class="carousel-wrapper" id="carousel-wrapper">
+				<button id="carousel-close" class="carousel-close">
+					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+						<path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+							d="M368 368L144 144M368 144L144 368" />
+					</svg>
+				</button>
+				<div class="carousel">
+					<button id="carouselPreviousSlideButton" class="carousel__button carousel__button--left">
+						<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+								d="M328 112L184 256l144 144" />
+						</svg>
+					</button>
+					<div class="carousel__track-container">
+						<ul id="track" class="carousel__track">
+							<li class="carousel__slide current-slide">
+								<img src="images\works\1\11hall.jpg" alt="photo-project-11">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\12hall.jpg" alt="photo-project-12">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\13hall.jpg" alt="photo-project-13">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\14hall.jpg" alt="photo-project-14">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\15hall.jpg" alt="photo-project-15">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\16hall.jpg" alt="photo-project-16">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\17hall.jpg" alt="photo-project-17">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\11bed.jpg" alt="photo-project-18">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\12bed.jpg" alt="photo-project-19">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\13bed.jpg" alt="photo-project-110">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\14bed.jpg" alt="photo-project-111">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\11bath.jpg" alt="photo-project-112">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\12bath.jpg" alt="photo-project-113">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\13bath.jpg" alt="photo-project-114">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\14bath.jpg" alt="photo-project-115">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\15bath.jpg" alt="photo-project-116">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\16bath.jpg" alt="photo-project-117">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\17bath.jpg" alt="photo-project-118">
+							</li>
+							<li class="carousel__slide">
+								<img src="images\works\1\18bath.jpg" alt="photo-project-119">
+							</li>
+						</ul>
+					</div>
+					<button id="carouselNextSlideButton" class="carousel__button carousel__button--right">
+						<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+								d="M184 112l144 144-144 144" />
+						</svg>
+					</button>
+					<div id="carouselNav" class="carousel__nav">
+						<button class="carousel__indicator current-slide"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio-sect">
+				<a href="#portfolio" class="project-a" id="first-project">
+					<img src="images\works\preview\11hall.jpg" alt="Project 1">
+					<div class="project-overlay">
+						<p class="project-title">Светлый дом с зеленым диваном</p>
+						<p class="project-desc">Classic</p>
+						<i class="project-icon"><svg id="Icons" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+								<path fill="white"
+									d="m5 30h22a3 3 0 0 0 3-3v-22a3 3 0 0 0 -3-3h-22a3 3 0 0 0 -3 3v22a3 3 0 0 0 3 3zm12-26h10a1 1 0 0 1 1 1v10h-11zm0 13h11v10a1 1 0 0 1 -1 1h-10zm-13-12a1 1 0 0 1 1-1h10v24h-10a1 1 0 0 1 -1-1z">
+								</path>
+							</svg>
+						</i>
+					</div>
+				</a>
+				<a href="#" class="project-a">
+					<img src="images\works\preview\31hall.jpg" alt="Project 2">
+					<div class="project-overlay">
+						<p class="project-title">Роскошная трешка в Нижнем</p>
+						<p class="project-desc">Modern</p>
+						<i class="project-icon"><svg id="Icons" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+								<path fill="white"
+									d="m5 30h22a3 3 0 0 0 3-3v-22a3 3 0 0 0 -3-3h-22a3 3 0 0 0 -3 3v22a3 3 0 0 0 3 3zm12-26h10a1 1 0 0 1 1 1v10h-11zm0 13h11v10a1 1 0 0 1 -1 1h-10zm-13-12a1 1 0 0 1 1-1h10v24h-10a1 1 0 0 1 -1-1z">
+								</path>
+							</svg>
+						</i>
+					</div>
+				</a>
+
+			
+		
+				<a href="#" class="project-a">
+					<img src="images\works\preview\24.jpg" alt="Project 3">
+					<div class="project-overlay">
+						<p class="project-title">Просторный солнечный коттедж</p>
+						<p class="project-desc">Classic</p>
+						<i class="project-icon"><svg id="Icons" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+								<path fill="white"
+									d="m5 30h22a3 3 0 0 0 3-3v-22a3 3 0 0 0 -3-3h-22a3 3 0 0 0 -3 3v22a3 3 0 0 0 3 3zm12-26h10a1 1 0 0 1 1 1v10h-11zm0 13h11v10a1 1 0 0 1 -1 1h-10zm-13-12a1 1 0 0 1 1-1h10v24h-10a1 1 0 0 1 -1-1z">
+								</path>
+							</svg>
+						</i>
+					</div>
+				</a>
+
+			</div>>
+		</section>
+		<section class="steps" id="steps">
+			<h6>/этапы работы</h6>
+			<ul class="list">
+				<li>
+					<div class="number_step">01</div>
+					<div class="info_step">
+						<h3 class="title_step">Консультация</h3>
+						<p class="description_step">Провожу консультацию прямо у вас на объекте Выезд бесплатный.</p>
+					</div>
+				</li>
+				<li>
+					<div class="number_step">02</div>
+					<div class="info_step">
+						<h3 class="title_step">Заключение договора</h3>
+						<p class="description_step">В день подписания договора замер Вашего объекта, которому необходим дизайн.
+							Приступаю к работе на следующий день после подписания.</p>
+					</div>
+				</li>
+				<li>
+					<div class="number_step">03</div>
+					<div class="info_step">
+						<h3 class="title_step">Разработка планового решения</h3>
+						<p class="description_step">Проектирую и согласовываю с вами нескольо различных вариантов: расстановки
+							мебели, зонирования и перепланировки помещения с соблюдением норм эргономики.</p>
+					</div>
+				</li>
+				<li>
+					<div class="number_step">04</div>
+					<div class="info_step">
+						<h3 class="title_step">Разработка 3D визуализации</h3>
+						<p class="description_step">Подбираю материалы и мебель по Вашему бюджету и создаю фотореалистичные картинки
+							Вашего будущего интерьера. Разработка уникального дизайна.</p>
+					</div>
+				</li>
+				<li>
+					<div class="number_step">05</div>
+					<div class="info_step">
+						<h3 class="title_step">Разработка рабочих чертежей</h3>
+						<p class="description_step">Чертежи – это основа будущего ремонта, поэтому я особенно тщательно подхожу к их
+							разработке. Рабочая документация, интуитивно понятная любому уровню специалистов.</p>
+					</div>
+				</li>
+				<li>
+					<div class="number_step">06</div>
+					<div class="info_step">
+						<h3 class="title_step">Ремонтные работы</h3>
+						<p class="description_step">Свои квалифицированные строители (работы по договору), а так же партнеры по
+							поставкам материалов, мебели, освещения (партнеры проверенные временем).</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<i class="scroll-up" id="scroll-up" onClick="scrollToTop()">
+			<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+				<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+					d="M352 296l-96-96-96 96" />
+				<path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none"
+					stroke="currentColor" stroke-miterlimit="10" stroke-width="32" /></svg>
+		</i>
+	</main>
+	<footer class="contacts" id="contacts">
+		<div class="foot-1">
+			<div class="zayava">
+				<form method="post" class="zayavka">
+					<span class="formname"> Оставьте заявку </span>
+					<span class="notion">Я вам перезвоню в ближайшее время и проконсультирую</span>
+					<label for="zayavka-name">
+						<input type="text" id="zayavka-name" name="zayavka-name" required autocomplete="first-name" placeholder="Ваше Имя">
+					</label>
+					<label for="zayavka-phone">
+						<i class="zayavka-phone__icon"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" fill="#B5B3BF"
+								viewBox="0 0 512 512">
+								<path
+									d="M391 480c-19.52 0-46.94-7.06-88-30-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0128.64-15.2c1-.43 1.93-.84 2.76-1.21 4.95-2.23 12.45-5.6 21.95-2 6.34 2.38 12 7.25 20.86 16 18.17 17.92 43 57.83 52.16 77.43 6.15 13.21 10.22 21.93 10.23 31.71 0 11.45-5.76 20.28-12.75 29.81-1.31 1.79-2.61 3.5-3.87 5.16-7.61 10-9.28 12.89-8.18 18.05 2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47 1.48-1.13 3-2.3 4.59-3.47 10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18 18 9.08 59.11 33.59 77.14 51.78 8.77 8.84 13.66 14.48 16.05 20.81 3.6 9.53.21 17-2 22-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 01-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 01391 480z" />
+							</svg>
+							</i> 
+							<span class="zayavka-phone__preffics">+7</span>
+							<input type="tel" id="zayavka-phone" name="zayavka-phone" pattern="[0-9]{10}" required="required" autocomplete="tel-national" maxlength="10" minlength="10" placeholder="(900) 900-20-20">
+					</label>
+					<button>Позвоните мне</button>
+				</form>
+			</div>
+			<div class="contact">
+				<h6>Контакты</h6>
+				<ul>
+					<li class="small"><a href="tel:+79200141157">+7 (920) 014-11-57</a></li>
+					<li class="small"><a href="tel:+79200607077">+7 (920) 060-70-77</a></li>
+					<li class="small"><a href="mailto:R-sizova@yandex.ru">R-sizova@yandex.ru</a></li>
+				</ul>
+			</div>
+			<div class="adress">
+				<h6>Адрес</h6>
+				<ul>
+					<li class="small">Россия</li>
+					<li class="small">Нижний Новгород</li>
+					<li class="small">ул. Героя Смирнова, 12</li>
+					<li class="small"><a href="https://yandex.ru/maps/-/CCUWjMVBWC">ДК ГАЗ</a></li>
+				</ul>
+			</div>
+			<div class="soc">
+				<h6>Социальные сети</h6>
+				<ul>
+					<li><a href="">Pinterest</a></li>
+					<li><a href="">Telegram</a></li>
+					<li><a href="">Instagram</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="information">
+			<p class="water">RimmaDesign</p>
+			<hr>
+			<div class="footeer">
+				<p class="copyright">Copyright © 2023 RimmaDesign</p>
+				<a class="politics" href="">Политика конфиденциальности</a>
+				<a class="offer" href="">Мой договор</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="popupmain.js"></script>
+	<script src="scrollup.js"></script>
+	<script src="carousel.js"></script>
+
+</body>
+
+</html>
