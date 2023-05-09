@@ -1,6 +1,7 @@
 const modalpop = document.getElementById("carousel-wrapper");
 const btnn = document.getElementById("first-project");
 const closecar = document.querySelector("carousel-close");
+const carrous = document.getElementById("carousel");
 
 
 const track = document.getElementById('track'),
@@ -14,6 +15,7 @@ const track = document.getElementById('track'),
 btnn.addEventListener("click", () => {
   modalpop.style.visibility ="visible"
   document.body.style.overflow = "hidden";
+  carrous.style.visibility="visible";
 });
 
 if (closecar) {
