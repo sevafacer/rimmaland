@@ -5,6 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+		content="Добрый день! Меня зовут Римма, я дизайнер интерьеров. Помогу вам создать уютный и функциональный интерьер для вашей квартиры или дома. Буду сопровождать вас на всем пути, помогу подобрать и купить материалы, посоветую все. Помогу реализовать даже самые смелые ваши решения. После нашей работы вы получите современный уютный интерьер, который будет служить вам на протяжении долгих лет и радовать вас!">
+	<meta name="keywords"
+		content="дизайн интерьера, дизайн, дизайн дома, дизайн квартиры, ремонт квартиры, ремонт дома, ремонт под ключ, ремонт дома под ключ, стойка, строительство домов, строительство квартир, евроремонт, современный дизайн, современная квартира, modern дизайн">
+	<link rel="canonical" href="https://rimmadesing.ru">
 	<link href="styles.css" rel="stylesheet">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -29,8 +34,10 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700&display=swap"
 		rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
 	<title>RimmaDesign.ru</title>
 	<script src="js\telmask.js"></script>
+	<script src="js/adressname.js"></script>
 </head>
 
 <body>
@@ -52,6 +59,9 @@
 				<li class="nav-item">
 					<a href="#contacts" class="nav-link" id="nav-link-4">Контакты</a>
 				</li>
+				<li>
+					<button class="nav__number-phone"><a href="tel:+79200141157">+7 (920) 014-11-57</a></button>
+				</li>
 			</ul>
 			<div class="number">
 				<i><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
@@ -60,6 +70,11 @@
 					</svg>
 				</i>
 				<a href="tel:+79200141157">+7 (920) 014-11-57</a>
+			</div>
+			<div class="hamburger" id="hamburger">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
 			</div>
 		</nav>
 	</header>
@@ -72,7 +87,7 @@
 
 				<div id="call_me" class="call_me">
 					<div class="call-me-content">
-						<span class="close" id="close">
+						<span class="callclose" id="callclose">
 							<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
 								<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
 									d="M368 368L144 144M368 144L144 368" /></svg>
@@ -82,19 +97,19 @@
 							<p>
 								В ближайшее время я вам перезвоню и проведу констультацию, договорюсь о дате и времени выезда к вам.
 							</p>
-							<form method="post" class="call-me__form">
+							<form method="post" action="/api/v1/send" class="call-me__form">
 								<div class="input-wrap">
-									<input class="input-field" type="text" id="name_call" name="name_call" required placeholder="Ваше Имя"
-										autocomplete="first-name" /><label for="name_call"></label>
+									<input class="input-field" type="text" id="name-call" name="name-call" required placeholder="Ваше Имя"
+										autocomplete="first-name" /><label for="name-call"></label>
 								</div>
 								<div class="input-wrap">
 									<svg xmlns="http://www.w3.org/2000/svg" class="input-icon" viewBox="0 0 512 512">
 										<path
 											d="M391 480c-19.52 0-46.94-7.06-88-30-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0128.64-15.2c1-.43 1.93-.84 2.76-1.21 4.95-2.23 12.45-5.6 21.95-2 6.34 2.38 12 7.25 20.86 16 18.17 17.92 43 57.83 52.16 77.43 6.15 13.21 10.22 21.93 10.23 31.71 0 11.45-5.76 20.28-12.75 29.81-1.31 1.79-2.61 3.5-3.87 5.16-7.61 10-9.28 12.89-8.18 18.05 2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47 1.48-1.13 3-2.3 4.59-3.47 10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18 18 9.08 59.11 33.59 77.14 51.78 8.77 8.84 13.66 14.48 16.05 20.81 3.6 9.53.21 17-2 22-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 01-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 01391 480z" />
 									</svg>
-									<input class="input-field" type="tel" id="phone_call" name="phone_call" data-tel-input
+									<input class="input-field" type="tel" id="phone-call" name="phone-call" data-tel-input
 										placeholder="+7 (900) 123-45-67" maxlength="18" requred="required" autocomplete="tel" /><label
-										for="phone_call"></label>
+										for="phone-call"></label>
 								</div>
 								<button class="call-for__btn">Позвоните мне</button>
 							</form>
@@ -103,23 +118,17 @@
 				</div>
 			</div>
 			<div class="div-main-2">
-				<div class="first_img main-picture">
-					<img src="images\main\1.jpg" alt="main_1" width="70%">
-				</div>
-				<div class="second_img main-picture">
-					<img src="images\main\2.jpg" alt="main_2" width="90%">
-				</div>
-				<div class="third_img main-picture">
-					<img src="images\main\3.jpg" alt="main_3" width="65%">
-				</div>
-				<div class="fourth_img main-picture">
-					<img src="images\main\4.jpg" alt="main_4" width="60%">
-				</div>
+				<img class="main__first-image" src="images\main\1.webp" alt="main_1" width="450px" height="810px">
+				<img class="main__second-image" src="images\main\2.webp" alt="main_2" width="1096px" height="472px">
+				<img class="main__third-image" src="images\main\3.webp" alt="main_3" width="650px" height="650px">
+				<img class="main__fourth-image" src="images\main\4.webp" alt="main_4" width="592px" height="666px">
 			</div>
 		</section>
 		<section class="about" id="about">
 			<div class="div-about-1">
-				<h2 class="typing" id="typing">Обо мне</h2>
+				<h2 class="typing">Обо мне</h2>
+				<img class="ProfilePhotoMobile" src="images\about\infophoto.webp" alt="ProfilePhotoMobile" width="435px"
+					height="435px">
 				<p class="text"> Добрый день! Я - дизайнер Ваших интерьеров. Работаю вместе с командой профессиональных
 					строителей. Миссия
 					нашей компании - помочь людям сделать ремонт легко и получить удовольствие от процесса.
@@ -147,7 +156,7 @@
 				</div>
 			</div>
 			<div class="div-about-2">
-				<img class="ProfilePhoto" src="images\about\infophoto.jpg" alt="ProfilePhoto">
+				<img class="ProfilePhoto" src="images\about\infophoto.webp" alt="ProfilePhoto" width="435px" height="435px">
 			</div>
 		</section>
 		<section class="price" id="price">
@@ -155,177 +164,305 @@
 				<h2>Подберите подходящую для вас услугу</h2>
 			</div>
 			<div class="serv">
-				<div class="pricediv left">
-					<div class="el-2">
-						<h3>Технический проект</h3>
-						<div class="vectorprice"><object type="image/svg+xml" data="icons\price\texn.svg"
-								aria-label="this object has text"></object></div>
-					</div>
-					<div class="el-3">
-						<ul>
-							<li>Составление технического задания</li>
-							<li>Планировочные решения</li>
-							<li>Планы демонтажа и монтажа</li>
-							<li>План электрики</li>
-						</ul>
-						<div class="cost">
-							<a class="tooltip-anchor" data-tooltip="tooltip1">
-								<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-									<path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z"
-										fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
-									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-										stroke-width="32" d="M220 220h32v116" />
-									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
-										stroke-width="32" d="M208 340h88" />
-									<path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z" /></svg>
-							</a>
-							<div class="tooltip" id="tooltip1">
-								<ul>
-									<li>Стрижка</li>
-									<li>Выезд</li>
-									<li>Птичка</li>
-									<li>Рыбка</li>
-									<li>Ногти</li>
-									<li>Домик</li>
-								</ul>
-							</div>
-							<div class="costnumb">1000</div>р/м<sup>2</sup>
+				<div class="mobile-wrapper">
+					<div class="pricediv left">
+						<div class="el-2">
+							<h3>Технический проект</h3>
+							<div class="vectorprice"><object type="image/svg+xml" data="icons\price\texn.svg"
+									aria-label="this object has text"></object></div>
 						</div>
+						<div class="el-3">
+							<ul class="price-description">
+								<li>Составление технического задания</li>
+								<li>Планировочные решения</li>
+								<li>Планы демонтажа и монтажа</li>
+								<li>План электрики</li>
+							</ul>
+							<div class="cost">
+								<i class="tooltip-anchor" data-tooltip="tooltip1">
+									<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z"
+											fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+										<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+											stroke-width="32" d="M220 220h32v116" />
+										<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+											stroke-width="32" d="M208 340h88" />
+										<path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z" /></svg>
+								</i>
+								<div class="tooltip" id="tooltip1">
+									<ul>
+										<li>Фотофиксация, замер</li>
+										<li>Планировочное решение до 5 вариантов</li>
+										<li>План монтажа/демонтажа перегородок</li>
+										<li>План привязки сантехнических приборов</li>
+										<li>План расстановки светильников</li>
+										<li>План привязки розеток и выключателей</li>
+										<li>План теплого пола</li>
+									</ul>
+								</div>
+								<div class="costnumb">1000</div>р/м<sup>2</sup>
+							</div>
+						</div>
+					</div>
+					<i class="price__iconarrow"><svg xmlns="http://www.w3.org/2000/svg" class="price__leftarrow"
+							viewBox="0 0 512 512">
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+								d="M184 112l144 144-144 144" /></svg></i>
+					<div class="price__Mobiledescription">
+						<ul>
+							<li>Фотофиксация, замер</li>
+							<li>Планировочное решение до 5 вариантов</li>
+							<li>План монтажа/демонтажа перегородок</li>
+							<li>План привязки сантехнических приборов</li>
+							<li>План расстановки светильников</li>
+							<li>План привязки розеток и выключателей</li>
+							<li>План теплого пола</li>
+						</ul>
 					</div>
 				</div>
 				<hr>
 			</div>
 			<div class="serv">
-				<div class="pricediv left">
-					<div class="el-4">
-						<h3>Базовый проект</h3>
-						<div class="vectorprice"><object type="image/svg+xml" data="icons\price\base.svg"
-								aria-label="this object has text"></object></div>
-					</div>
-					<div class="el-5">
-						<ul>
-							<li>Составление технического задания</li>
-							<li>Планировочные решения</li>
-							<li>Планы демонтажа и монтажа</li>
-							<li>План электрики</li>
-							<li>Развертки стен, полов, потолков</li>
-							<li>3D визуализация</li>
-						</ul>
-						<div class="cost">
-							<a class="tooltip-anchor" data-tooltip="tooltip2">
-								<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-									<path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z"
-										fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
-									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-										stroke-width="32" d="M220 220h32v116" />
-									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
-										stroke-width="32" d="M208 340h88" />
-									<path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z" /></svg>
-							</a>
-							<div class="tooltip" id="tooltip2">
-								<ul>
-									<li>Стрижка</li>
-									<li>Выезд</li>
-									<li>Птичка</li>
-									<li>Рыбка</li>
-									<li>Ногти</li>
-									<li>Домик</li>
-									<li>Стрижка</li>
-									<li>Выезд</li>
-									<li>Птичка</li>
-									<li>Рыбка</li>
-									<li>Ногти</li>
-									<li>Домик</li>
-									<li>Стрижка</li>
-									<li>Выезд</li>
-									<li>Птичка</li>
-									<li>Рыбка</li>
-									<li>Ногти</li>
-									<li>Домик</li>
-								</ul>
-							</div>
-							<div class="costnumb">2500 </div>р/м<sup>2</sup>
+				<div class="mobile-wrapper">
+					<div class="pricediv left">
+						<div class="el-4">
+							<h3>Базовый проект</h3>
+							<div class="vectorprice"><object type="image/svg+xml" data="icons\price\base.svg"
+									aria-label="this object has text"></object></div>
 						</div>
+						<div class="el-5">
+							<ul class="price-description">
+								<li>Составление технического задания</li>
+								<li>Планировочные решения</li>
+								<li>Планы демонтажа и монтажа</li>
+								<li>План электрики</li>
+								<li>Развертки стен, полов, потолков</li>
+								<li>3D визуализация</li>
+							</ul>
+							<div class="cost">
+								<i class="tooltip-anchor" data-tooltip="tooltip2">
+									<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z"
+											fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+										<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+											stroke-width="32" d="M220 220h32v116" />
+										<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+											stroke-width="32" d="M208 340h88" />
+										<path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z" /></svg>
+								</i>
+								<div class="tooltip" id="tooltip2">
+									<ul>
+										<li>Фотофиксация, замер</li>
+										<li>Планировочное решение до 5 вариантов</li>
+										<li>Концепция будущего интерьера. Коллажи</li>
+										<li>3D визуализация интерьера по каждому помещению</li>
+										<li>План монтажа/демонтажа перегородок</li>
+										<li>План привязки сантехнических приборов</li>
+										<li>План расстановки светильников</li>
+										<li>План привязки розеток и выключателей</li>
+										<li>План теплого пола</li>
+										<li>План покрытий пола</li>
+										<li>План потолка, необходимые узлы и сечения</li>
+										<li>План расстановки кондиционеров</li>
+										<li>Ведомость дверных проемов</li>
+										<li>Развертки стен по каждому помещению</li>
+										<li>План раскладки плитки</li>
+										<li>Чертежи по мебели для подрядных организация</li>
+										<li>Подбор мебели и оборудования (4 выезда по магазинам)</li>
+										<li>Ведомости отделочных материалов, мебели, освещения, сантехники, дверей</li>
+									</ul>
+								</div>
+								<div class="costnumb">3000 </div>р/м<sup>2</sup>
+							</div>
+						</div>
+					</div>
+					<i class="price__iconarrow"><svg xmlns="http://www.w3.org/2000/svg" class="price__leftarrow"
+							viewBox="0 0 512 512">
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+								d="M184 112l144 144-144 144" /></svg></i>
+					<div class="price__Mobiledescription">
+						<ul>
+							<li>Фотофиксация, замер</li>
+							<li>Планировочное решение до 5 вариантов</li>
+							<li>Концепция будущего интерьера. Коллажи</li>
+							<li>3D визуализация интерьера по каждому помещению</li>
+							<li>План монтажа/демонтажа перегородок</li>
+							<li>План привязки сантехнических приборов</li>
+							<li>План расстановки светильников</li>
+							<li>План привязки розеток и выключателей</li>
+							<li>План теплого пола</li>
+							<li>План покрытий пола</li>
+							<li>План потолка, необходимые узлы и сечения</li>
+							<li>План расстановки кондиционеров</li>
+							<li>Ведомость дверных проемов</li>
+							<li>Развертки стен по каждому помещению</li>
+							<li>План раскладки плитки</li>
+							<li>Чертежи по мебели для подрядных организация</li>
+							<li>Подбор мебели и оборудования (4 выезда по магазинам)</li>
+							<li>Ведомости отделочных материалов, мебели, освещения, сантехники, дверей</li>
+						</ul>
 					</div>
 				</div>
 				<hr>
 			</div>
 			<div class="serv">
-				<div class="pricediv left">
-					<div class="el-6">
-						<h3>Полный проект</h3>
-						<div class="vectorprice"><object type="image/svg+xml" data="icons\price\full.svg"
-								aria-label="this object has text"></object></div>
-					</div>
-					<div class="el-7">
-						<ul>
-							<li>Составление технического задания</li>
-							<li>Планировочные решения</li>
-							<li>Планы демонтажа и монтажа</li>
-							<li>План электрики</li>
-							<li>3D визуализация</li>
-							<li>Комплектация</li>
-						</ul>
-						<div class="cost">
-							<a class="tooltip-anchor" data-tooltip="tooltip3">
-								<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-									<path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z"
-										fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
-									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-										stroke-width="32" d="M220 220h32v116" />
-									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
-										stroke-width="32" d="M208 340h88" />
-									<path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z" /></svg>
-							</a>
-							<div class="tooltip" id="tooltip3">
-								<ul>
-									<li>Стрижка</li>
-									<li>Выезд</li>
-									<li>Птичка</li>
-									<li>Рыбка</li>
-									<li>Ногти</li>
-									<li>Домик</li>
-								</ul>
-							</div>
-							<div class="costnumb">5000 </div>р/м<sup>2</sup>
+				<div class="mobile-wrapper">
+					<div class="pricediv left">
+						<div class="el-6">
+							<h3>Полный проект</h3>
+							<div class="vectorprice"><object type="image/svg+xml" data="icons\price\full.svg"
+									aria-label="this object has text"></object></div>
 						</div>
+						<div class="el-7">
+							<ul class="price-description">
+								<li>Составление технического задания</li>
+								<li>Планировочные решения</li>
+								<li>Планы демонтажа и монтажа</li>
+								<li>План электрики</li>
+								<li>3D визуализация</li>
+								<li>Комплектация</li>
+							</ul>
+							<div class="cost">
+								<i class="tooltip-anchor" data-tooltip="tooltip3">
+									<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z"
+											fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+										<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+											stroke-width="32" d="M220 220h32v116" />
+										<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+											stroke-width="32" d="M208 340h88" />
+										<path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z" /></svg>
+								</i>
+								<div class="tooltip" id="tooltip3">
+									<ul>
+										<li>Фотофиксация, замер</li>
+										<li>Планировочное решение до 5 вариантов</li>
+										<li>Концепция будущего интерьера. Коллажи</li>
+										<li>3D визуализация интерьера по каждому помещению</li>
+										<li>План монтажа/демонтажа перегородок</li>
+										<li>План привязки сантехнических приборов</li>
+										<li>План расстановки светильников</li>
+										<li>План привязки розеток и выключателей</li>
+										<li>План теплого пола</li>
+										<li>План покрытий пола</li>
+										<li>План потолка, необходимые узлы и сечения</li>
+										<li>План расстановки кондиционеров</li>
+										<li>Ведомость дверных проемов</li>
+										<li>Развертки стен по каждому помещению</li>
+										<li>План раскладки плитки</li>
+										<li>Чертежи по мебели для подрядных организация</li>
+										<li>Подбор мебели и оборудования (4 выезда по магазинам)</li>
+										<li>Ведомости отделочных материалов, мебели, освещения, сантехники, дверей</li>
+										<li>Памятка для строителей по тонким моментам ремонта</li>
+										<li>Гранд-смета с ценами на отделочные материалы, мебель, освещение, сантехнику, двери, электрику
+										</li>
+										<li>3 месяца авторского надзора в подарок</li>
+									</ul>
+								</div>
+								<div class="costnumb">5000 </div>р/м<sup>2</sup>
+							</div>
+						</div>
+					</div>
+					<i class="price__iconarrow"><svg xmlns="http://www.w3.org/2000/svg" class="price__leftarrow"
+							viewBox="0 0 512 512">
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+								d="M184 112l144 144-144 144" /></svg></i>
+					<div class="price__Mobiledescription">
+						<ul>
+							<li>Фотофиксация, замер</li>
+							<li>Планировочное решение до 5 вариантов</li>
+							<li>Концепция будущего интерьера. Коллажи</li>
+							<li>3D визуализация интерьера по каждому помещению</li>
+							<li>План монтажа/демонтажа перегородок</li>
+							<li>План привязки сантехнических приборов</li>
+							<li>План расстановки светильников</li>
+							<li>План привязки розеток и выключателей</li>
+							<li>План теплого пола</li>
+							<li>План покрытий пола</li>
+							<li>План потолка, необходимые узлы и сечения</li>
+							<li>План расстановки кондиционеров</li>
+							<li>Ведомость дверных проемов</li>
+							<li>Развертки стен по каждому помещению</li>
+							<li>План раскладки плитки</li>
+							<li>Чертежи по мебели для подрядных организация</li>
+							<li>Подбор мебели и оборудования (4 выезда по магазинам)</li>
+							<li>Ведомости отделочных материалов, мебели, освещения, сантехники, дверей</li>
+							<li>Памятка для строителей по тонким моментам ремонта</li>
+							<li>Гранд-смета с ценами на отделочные материалы, мебель, освещение, сантехнику, двери, электрику</li>
+							<li>3 месяца авторского надзора в подарок</li>
+						</ul>
 					</div>
 				</div>
 				<hr>
 			</div>
 			<div class="serv">
-				<div class="pricediv left">
-					<div class="el-8">
-						<h3>Авторский надзор</h3>
-						<div class="vectorprice"><object type="image/svg+xml" data="icons\price\avtor.svg"
-								aria-label="this object has text"></object></div>
-					</div>
-					<div class="el-9">
-						<p>В рамках надзора осуществляется контроль за ходом
-							строительных работ и закупка чистовых материалов</p>
-						<div class="cost">
-							<a class="tooltip-anchor" data-tooltip="tooltip4">
-								<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-									<path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z"
-										fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
-									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-										stroke-width="32" d="M220 220h32v116" />
-									<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
-										stroke-width="32" d="M208 340h88" />
-									<path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z" /></svg>
-							</a>
-							<div class="tooltip" id="tooltip4">
-								<ul>
-									<li>Стрижка</li>
-									<li>Выезд</li>
-									<li>Птичка</li>
-									<li>Рыбка</li>
-									<li>Ногти</li>
-									<li>Домик</li>
-								</ul>
-							</div>
-							<div class="costnumb">25000 </div>р/мес
+				<div class="mobile-wrapper">
+					<div class="pricediv left">
+						<div class="el-8">
+							<h3>Авторский надзор</h3>
+							<div class="vectorprice"><object type="image/svg+xml" data="icons\price\avtor.svg"
+									aria-label="this object has text"></object></div>
 						</div>
+						<div class="el-9">
+							<p class="price-description">В рамках надзора осуществляется контроль за ходом
+								строительных работ и закупка чистовых материалов</p>
+							<div class="cost">
+								<i class="tooltip-anchor" data-tooltip="tooltip4">
+									<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z"
+											fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+										<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+											stroke-width="32" d="M220 220h32v116" />
+										<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+											stroke-width="32" d="M208 340h88" />
+										<path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z" /></svg>
+								</i>
+								<div class="tooltip" id="tooltip4">
+									<ul>
+										<li>Выезд на объект при необходимости (не более 4х раз в месяц, остальные выезды оплачиваются
+											отдельно)</li>
+										<li>Консультации заказчиков и строителей по проекту в он-лайн режиме с 10-19 часов в будние дни</li>
+										<li>Зрительный контроль за ведением строительных работ, правильного прочтения чертежей, учета всех
+											тонкостей проекта
+										</li>
+										<li>Выдача новых чертежей при необходимости</li>
+										<li>Подбор и закупка мебели и чистовых отделочных материалов. Ведение договоров.</li>
+										<li>Выбор подрядчика по индивидуальным изделиям, координация работы, согласование скидок и сроков
+										</li>
+										<li>Подбор аналогов в случае замены мебели, отделочных материалов при необходимости</li>
+										<li>Примерка выкрасов, фасадов, обоев и тканей на объекте под истинным освещением помещения</li>
+										<li>Подбор декора и комплектация текстилем</li>
+										<li>Подбор предметов первой необходимости для жизни</li>
+										<li>Ведение журнала авторского надзора в открытом доступе для заказчиков
+										</li>
+									</ul>
+								</div>
+								<div class="costnumb">25000 </div>р/мес
+							</div>
+						</div>
+					</div>
+					<i class="price__iconarrow"><svg xmlns="http://www.w3.org/2000/svg" class="price__leftarrow"
+							viewBox="0 0 512 512">
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+								d="M184 112l144 144-144 144" /></svg></i>
+					<div class="price__Mobiledescription autor_mobile">
+						<ul>
+							<li>Выезд на объект при необходимости (не более 4х раз в месяц, остальные выезды оплачиваются отдельно)
+							</li>
+							<li>Консультации заказчиков и строителей по проекту в он-лайн режиме с 10-19 часов в будние дни</li>
+							<li>Зрительный контроль за ведением строительных работ, правильного прочтения чертежей, учета всех
+								тонкостей проекта
+							</li>
+							<li>Выдача новых чертежей при необходимости</li>
+							<li>Подбор и закупка мебели и чистовых отделочных материалов. Ведение договоров.</li>
+							<li>Выбор подрядчика по индивидуальным изделиям, координация работы, согласование скидок и сроков</li>
+							<li>Подбор аналогов в случае замены мебели, отделочных материалов при необходимости</li>
+							<li>Примерка выкрасов, фасадов, обоев и тканей на объекте под истинным освещением помещения</li>
+							<li>Подбор декора и комплектация текстилем</li>
+							<li>Подбор предметов первой необходимости для жизни</li>
+							<li>Ведение журнала авторского надзора в открытом доступе для заказчиков
+							</li>
+						</ul>
 					</div>
 				</div>
 				<hr>
@@ -333,11 +470,11 @@
 		</section>
 		<section class="price-new" id="price-new">
 			<p class="price-sensention">Здесь при необходимости можно ознакомиться с моим <a class="price-anchor "
-					href="busi-docs\Договор_RimmaDesign.pdf">договором</a></p>
+					href="docs\Договор_RimmaDesign.pdf">договором</a></p>
 		</section>
 		<section class="vr360" id="vr360">
 			<div class="vr-1">
-				<object type="image/svg+xml" data="icons\main\360_view_ibivag7cow6n.svg"
+				<object type="image/svg+xml" data="icons\vr\360_view_ibivag7cow6n.svg"
 					aria-label="this object has text"></object>
 				<h2>360<sup>o</sup> и VR-обзор вашего будущего интерьера</h2>
 			</div>
@@ -348,9 +485,9 @@
 				</div>
 				<div class="div360-qr">
 					<a class="qr" href="https://api2.enscape3d.com/v3/view/b7ff3766-69ab-4484-9388-49b4330b8ed7"><img
-							src="images\vr\QR1.png" alt="qr-first"></a>
+							src="images\vr\QR1.webp" alt="qr-first" width="230px" height="230px"></a>
 					<a class="qr" href="https://api2.enscape3d.com/v3/view/7c54e500-0798-4e59-b044-e176aabe78fc"><img
-							src="images\vr\Qr2.png" alt="qr-second"></a>
+							src="images\vr\Qr2.webp" alt="qr-second" width="230px" height="230px"></a>
 				</div>
 			</div>
 			<div class="vr-3">
@@ -363,7 +500,7 @@
 			<div class="portfolio-sect">
 
 				<a href="#modal1" class="project project1">
-					<img src="images\works\preview\11hall.jpg" alt="Project 1">
+					<img src="images\works\preview\11hall.webp" alt="Project 1">
 					<div class="project-overlay">
 						<p class="project-title">Светлый дом с зеленым диваном</p>
 						<p class="project-desc">Classic</p>
@@ -380,102 +517,9 @@
 						</i>
 					</div>
 				</a>
-				<div id="modal1" class="portfolio__modal modal1">
-					<div class="portfolio__modal-content">
-						<button class="portfolio__modal-close"><svg xmlns="http://www.w3.org/2000/svg" class="portfolio__modal-close-icon" viewBox="0 0 512 512"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg></button>
-						<div class="portfolio__slider">
-							<button class="portfolio__carousel-prev" onclick="showImage(-1)"><svg xmlns="http://www.w3.org/2000/svg" class="portfolio__prev" viewBox="0 0 512 512">
-								<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
-									d="M328 112L184 256l144 144" /></svg></button>
-							<div class="portfolio__slider-container">
-								<div class="slider-slide active">
-									<img src="images/works/1/11hall.jpg" alt="work-11" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/12hall.jpg" alt="work-12" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/13hall.jpg" alt="work-13">
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/14hall.jpg" alt="work-14" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/15hall.jpg" alt="work-15" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/16hall.jpg" alt="work-16">
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/17hall.jpg" alt="work-17">
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/11bed.jpg" alt="work-18" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/12bed.jpg" alt="work-19" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/13bed.jpg" alt="work-110">
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/14bed.jpg" alt="work-111" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/11bath.jpg" alt="work-112" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/12bath.jpg" alt="work-113">
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/13bath.jpg" alt="work-114" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/14bath.jpg" alt="work-115">
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/15bath.jpg" alt="work-116" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/16bath.jpg" alt="work-117">
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/17bath.jpg" alt="work-118" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/1/18bath.jpg" alt="work-119">
-								</div>
-							</div>
-							<button class="portfolio__carousel-next" onclick="showImage(+1)"><svg xmlns="http://www.w3.org/2000/svg" class="portfolio__forward"
-								viewBox="0 0 512 512">
-								<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
-									d="M184 112l144 144-144 144" /></svg></button>
-							</div>
-							<div class="slider__dots">
-								<div class="slider__dot active"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-						</div>
-					</div>
-				</div>
-				<a href="#modal2" class="project project2" >
-					<img src="images\works\preview\31hall.jpg" alt="Project 2" >
+
+				<a href="#modal2" class="project project2">
+					<img src="images\works\preview\31hall.webp" alt="Project 2">
 					<div class="project-overlay">
 						<p class="project-title">Роскошная трешка в Нижнем</p>
 						<p class="project-desc">Modern</p>
@@ -492,62 +536,9 @@
 						</i>
 					</div>
 				</a>
-				<div id="modal2" class="portfolio__modal modal2">
-					<div class="portfolio__modal-content">
-						<button class="portfolio__modal-close"><svg xmlns="http://www.w3.org/2000/svg" class="portfolio__modal-close-icon" viewBox="0 0 512 512"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg></button>
-						<div class="portfolio__slider">
-							<button class="portfolio__carousel-prev" onclick="showImage(-1)"><svg xmlns="http://www.w3.org/2000/svg" class="portfolio__prev" viewBox="0 0 512 512">
-								<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
-									d="M328 112L184 256l144 144" /></svg></button>
-							<div class="portfolio__slider-container">
-								<div class="slider-slide active">
-									<img src="images/works/3/31hall.jpg" alt="work-31" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/3/32hall.jpg" alt="work-32" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/3/33hall.jpg" alt="work-33" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/3/34hall.jpg" alt="work-34" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/3/31child.jpg" alt="work-35" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/3/32child.jpg" alt="work-36" >
-								</div>
-								<div class="slider-slide">
-									<img src="images/works/3/33child.jpg" alt="work-37" >
-							</div>
-							<div class="slider-slide">
-								<img src="images/works/3/34child.jpg" alt="work-38" >
-							</div>
-							<div class="slider-slide">
-								<img src="images/works/3/35child.jpg" alt="work-39" >
-						</div>
-							</div>
-							<button class="portfolio__carousel-next" onclick="showImage(+1)"><svg xmlns="http://www.w3.org/2000/svg" class="portfolio__forward"
-								viewBox="0 0 512 512">
-								<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
-									d="M184 112l144 144-144 144" /></svg></button>
-							</div>
-							<div class="slider__dots">
-								<div class="slider__dot active"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-						</div>
-					</div>
-				</div>
+
 				<a href="#modal3" class="project project3">
-					<img src="images\works\preview\24.jpg" alt="Project 3">
+					<img src="images\works\preview\24.webp" alt="Project 3">
 					<div class="project-overlay">
 						<p class="project-title">Просторный солнечный коттедж</p>
 						<p class="project-desc">Classic</p>
@@ -564,58 +555,222 @@
 						</i>
 					</div>
 				</a>
-				<div id="modal3" class="portfolio__modal modal3">
-					<div class="portfolio__modal-content">
-						<button class="portfolio__modal-close"><svg xmlns="http://www.w3.org/2000/svg" class="portfolio__modal-close-icon" viewBox="0 0 512 512"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg></button>
-						<div class="portfolio__slider">
-							<button class="portfolio__carousel-prev" onclick="showImage(-1)"><svg xmlns="http://www.w3.org/2000/svg" class="portfolio__prev" viewBox="0 0 512 512">
+
+			</div>
+
+			<div id="modal1" class="portfolio__modal modal1">
+				<div class="portfolio__modal-content">
+					<button class="portfolio__modal-close"><svg xmlns="http://www.w3.org/2000/svg"
+							class="portfolio__modal-close-icon" viewBox="0 0 512 512">
+							<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+								d="M368 368L144 144M368 144L144 368" /></svg></button>
+					<div class="portfolio__slider">
+						<button class="portfolio__carousel-prev" onclick="showImage(-1)"><svg xmlns="http://www.w3.org/2000/svg"
+								class="portfolio__prev" viewBox="0 0 512 512">
 								<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
 									d="M328 112L184 256l144 144" /></svg></button>
-							<div class="portfolio__slider-container">
-								<div class="slider-slide active">
-									<img src="images/works/2/21.jpg" alt="work-21" >
-								</div>
-								<div class="slider-slide ">
-									<img src="images/works/2/22.jpg" alt="work-22" >
-								</div>
-								<div class="slider-slide ">
-									<img src="images/works/2/23.jpg" alt="work-23" >
-								</div>
-								<div class="slider-slide ">
-									<img src="images/works/2/24.jpg" alt="work-24" >
-								</div>
-								<div class="slider-slide ">
-									<img src="images/works/2/25.jpg" alt="work-25" >
-								</div>
-								<div class="slider-slide ">
-									<img src="images/works/2/26.jpg" alt="work-26" >
-								</div>
-								<div class="slider-slide ">
-									<img src="images/works/2/27.jpg" alt="work-27" >
-								</div>
-								<div class="slider-slide ">
-									<img src="images/works/2/28.jpg" alt="work-28" >
-								</div>
-								<div class="slider-slide ">
-									<img src="images/works/2/29.jpg" alt="work-29" >
-								</div>
+						<div class="portfolio__slider-container">
+							<div class="slider-slide active">
+								<img src="images/works/1/11hall.webp" alt="work-11">
 							</div>
-							<button class="portfolio__carousel-next" onclick="showImage(+1)"><svg xmlns="http://www.w3.org/2000/svg" class="portfolio__forward"
-								viewBox="0 0 512 512">
+							<div class="slider-slide">
+								<img src="images/works/1/12hall.webp" alt="work-12">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/13hall.webp" alt="work-13">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/14hall.webp" alt="work-14">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/15hall.webp" alt="work-15">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/16hall.webp" alt="work-16">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/17hall.webp" alt="work-17">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/11bed.webp" alt="work-18">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/12bed.webp" alt="work-19">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/13bed.webp" alt="work-110">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/14bed.webp" alt="work-111">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/11bath.webp" alt="work-112">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/12bath.webp" alt="work-113">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/13bath.webp" alt="work-114">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/14bath.webp" alt="work-115">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/15bath.webp" alt="work-116">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/16bath.webp" alt="work-117">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/17bath.webp" alt="work-118">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/1/18bath.webp" alt="work-119">
+							</div>
+						</div>
+						<button class="portfolio__carousel-next" onclick="showImage(+1)"><svg xmlns="http://www.w3.org/2000/svg"
+								class="portfolio__forward" viewBox="0 0 512 512">
 								<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
 									d="M184 112l144 144-144 144" /></svg></button>
+					</div>
+					<div class="slider__dots">
+						<div class="slider__dot active"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="modal2" class="portfolio__modal modal2">
+				<div class="portfolio__modal-content">
+					<button class="portfolio__modal-close"><svg xmlns="http://www.w3.org/2000/svg"
+							class="portfolio__modal-close-icon" viewBox="0 0 512 512">
+							<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+								d="M368 368L144 144M368 144L144 368" /></svg></button>
+					<div class="portfolio__slider">
+						<button class="portfolio__carousel-prev" onclick="showImage(-1)"><svg xmlns="http://www.w3.org/2000/svg"
+								class="portfolio__prev" viewBox="0 0 512 512">
+								<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+									d="M328 112L184 256l144 144" /></svg></button>
+						<div class="portfolio__slider-container">
+							<div class="slider-slide active">
+								<img src="images/works/3/31hall.webp" alt="work-31">
 							</div>
-							<div class="slider__dots">
-								<div class="slider__dot active"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
-								<div class="slider__dot"></div>
+							<div class="slider-slide">
+								<img src="images/works/3/32hall.webp" alt="work-32">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/3/33hall.webp" alt="work-33">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/3/34hall.webp" alt="work-34">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/3/31child.webp" alt="work-35">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/3/32child.webp" alt="work-36">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/3/33child.webp" alt="work-37">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/3/34child.webp" alt="work-38">
+							</div>
+							<div class="slider-slide">
+								<img src="images/works/3/35child.webp" alt="work-39">
+							</div>
 						</div>
+						<button class="portfolio__carousel-next" onclick="showImage(+1)"><svg xmlns="http://www.w3.org/2000/svg"
+								class="portfolio__forward" viewBox="0 0 512 512">
+								<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+									d="M184 112l144 144-144 144" /></svg></button>
+					</div>
+					<div class="slider__dots">
+						<div class="slider__dot active"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="modal3" class="portfolio__modal modal3">
+				<div class="portfolio__modal-content">
+					<button class="portfolio__modal-close"><svg xmlns="http://www.w3.org/2000/svg"
+							class="portfolio__modal-close-icon" viewBox="0 0 512 512">
+							<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+								d="M368 368L144 144M368 144L144 368" /></svg></button>
+					<div class="portfolio__slider">
+						<button class="portfolio__carousel-prev" onclick="showImage(-1)"><svg xmlns="http://www.w3.org/2000/svg"
+								class="portfolio__prev" viewBox="0 0 512 512">
+								<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+									d="M328 112L184 256l144 144" /></svg></button>
+						<div class="portfolio__slider-container">
+							<div class="slider-slide active">
+								<img src="images/works/2/21.webp" alt="work-21">
+							</div>
+							<div class="slider-slide ">
+								<img src="images/works/2/22.webp" alt="work-22">
+							</div>
+							<div class="slider-slide ">
+								<img src="images/works/2/23.webp" alt="work-23">
+							</div>
+							<div class="slider-slide ">
+								<img src="images/works/2/24.webp" alt="work-24">
+							</div>
+							<div class="slider-slide ">
+								<img src="images/works/2/25.webp" alt="work-25">
+							</div>
+							<div class="slider-slide ">
+								<img src="images/works/2/26.webp" alt="work-26">
+							</div>
+							<div class="slider-slide ">
+								<img src="images/works/2/27.webp" alt="work-27">
+							</div>
+							<div class="slider-slide ">
+								<img src="images/works/2/28.webp" alt="work-28">
+							</div>
+							<div class="slider-slide ">
+								<img src="images/works/2/29.webp" alt="work-29">
+							</div>
+						</div>
+						<button class="portfolio__carousel-next" onclick="showImage(+1)"><svg xmlns="http://www.w3.org/2000/svg"
+								class="portfolio__forward" viewBox="0 0 512 512">
+								<path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+									d="M184 112l144 144-144 144" /></svg></button>
+					</div>
+					<div class="slider__dots">
+						<div class="slider__dot active"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
+						<div class="slider__dot"></div>
 					</div>
 				</div>
 			</div>
@@ -623,52 +778,70 @@
 		<section class="steps" id="steps">
 			<h2 class="steps__title">/этапы работы</h2>
 			<ul class="list">
-				<li>
+				<li class="steps__number">
 					<div class="number_step">01</div>
 					<div class="info_step">
 						<h3 class="title_step">Консультация</h3>
 						<p class="description_step">Провожу консультацию прямо у вас на объекте Выезд бесплатный.</p>
 					</div>
+					<i class="steps__showinfo"><svg xmlns="http://www.w3.org/2000/svg" class="downrow" viewBox="0 0 512 512">
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+								d="M112 184l144 144 144-144" /></svg></i>
 				</li>
-				<li>
+				<li class="steps__number">
 					<div class="number_step">02</div>
 					<div class="info_step">
 						<h3 class="title_step">Заключение договора</h3>
 						<p class="description_step">В день подписания договора замер Вашего объекта, которому необходим дизайн.
 							Приступаю к работе на следующий день после подписания.</p>
 					</div>
+					<i class="steps__showinfo"><svg xmlns="http://www.w3.org/2000/svg" class="downrow" viewBox="0 0 512 512">
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+								d="M112 184l144 144 144-144" /></svg></i>
 				</li>
-				<li>
+				<li class="steps__number">
 					<div class="number_step">03</div>
 					<div class="info_step">
 						<h3 class="title_step">Разработка планового решения</h3>
 						<p class="description_step">Проектирую и согласовываю с вами нескольо различных вариантов: расстановки
 							мебели, зонирования и перепланировки помещения с соблюдением норм эргономики.</p>
 					</div>
+					<i class="steps__showinfo"><svg xmlns="http://www.w3.org/2000/svg" class="downrow" viewBox="0 0 512 512">
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+								d="M112 184l144 144 144-144" /></svg></i>
 				</li>
-				<li>
+				<li class="steps__number">
 					<div class="number_step">04</div>
 					<div class="info_step">
 						<h3 class="title_step">Разработка 3D визуализации</h3>
 						<p class="description_step">Подбираю материалы и мебель по Вашему бюджету и создаю фотореалистичные картинки
 							Вашего будущего интерьера. Разработка уникального дизайна.</p>
 					</div>
+					<i class="steps__showinfo"><svg xmlns="http://www.w3.org/2000/svg" class="downrow" viewBox="0 0 512 512">
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+								d="M112 184l144 144 144-144" /></svg></i>
 				</li>
-				<li>
+				<li class="steps__number">
 					<div class="number_step">05</div>
 					<div class="info_step">
 						<h3 class="title_step">Разработка рабочих чертежей</h3>
 						<p class="description_step">Чертежи – это основа будущего ремонта, поэтому я особенно тщательно подхожу к их
 							разработке. Рабочая документация, интуитивно понятная любому уровню специалистов.</p>
 					</div>
+					<i class="steps__showinfo"><svg xmlns="http://www.w3.org/2000/svg" class="downrow" viewBox="0 0 512 512">
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+								d="M112 184l144 144 144-144" /></svg></i>
 				</li>
-				<li>
+				<li class="steps__number">
 					<div class="number_step">06</div>
 					<div class="info_step">
 						<h3 class="title_step">Ремонтные работы</h3>
 						<p class="description_step">Свои квалифицированные строители (работы по договору), а так же партнеры по
 							поставкам материалов, мебели, освещения (партнеры проверенные временем).</p>
 					</div>
+					<i class="steps__showinfo"><svg xmlns="http://www.w3.org/2000/svg" class="downrow" viewBox="0 0 512 512">
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+								d="M112 184l144 144 144-144" /></svg></i>
 				</li>
 			</ul>
 		</section>
@@ -687,43 +860,65 @@
 					<p class="footer__form-title"> Оставьте заявку </p>
 					<p class="footer__form-notion">Я вам перезвоню в ближайшее время и проконсультирую</p>
 					<div class="footer__input-wrapper name-wrapper">
-						<input type="text" class="footer__field name-field" name="footer__form-name" required
-							autocomplete="first-name" placeholder="Ваше Имя"><label for="footer__form-name"></label></div>
+						<input type="text" class="footer__field name-field" name="name-call" required autocomplete="first-name"
+							placeholder="Ваше Имя"><label for="name-call"></label></div>
 					<div class="footer__input-wrapper phone-wrapper">
 						<svg xmlns="http://www.w3.org/2000/svg" class="footer__icon-input" viewBox="0 0 512 512" stroke="7B7982">
 							<path
 								d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z"
 								fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" /></svg>
-						<input type="tel" name="footer-phone" class="footer__field phone-footer" data-tel-input
+						<input type="tel" name="phone-call" class="footer__field phone-footer" data-tel-input
 							placeholder="+7 (900) 123-45-67" maxlength="18" requred="required" autocomplete="tel" /> <label
-							for="footer-phone"></label>
+							for="phone-call"></label>
 						<button class="footer__form-btn">Позвоните мне</button>
 					</div>
+					<button class="footer__form-phonebtn">Позвоните мне</button>
 				</form>
 			</div>
 			<div class="contact">
 				<p class="title-description-heading">Контакты</p>
 				<ul>
-					<li class="small"><a href="tel:+79200141157">+7 (920) 014-11-57</a></li>
-					<li class="small"><a href="tel:+79200607077">+7 (920) 060-70-77</a></li>
-					<li class="small"><a href="mailto:R-sizova@yandex.ru">R-sizova@yandex.ru</a></li>
+					<li class="small">
+						<p class="contacts-info"><a class="contacts-info" href="tel:+79200141157">+7 (920) 014-11-57</a></p>
+					</li>
+					<li class="small">
+						<p class="contacts-info"><a class="contacts-info" href="tel:+79200607077">+7 (920) 060-70-77</a></p>
+					</li>
+					<li class="small">
+						<p class="contacts-info"><a class="contacts-info" href="mailto:R-sizova@yandex.ru">R-sizova@yandex.ru</a>
+						</p>
+					</li>
 				</ul>
 			</div>
 			<div class="adress">
 				<p class="title-description-heading">Адрес</p>
 				<ul>
-					<li class="small">Россия</li>
-					<li class="small">Нижний Новгород</li>
-					<li class="small">ул. Героя Смирнова, 12</li>
-					<li class="small"><a href="https://yandex.ru/maps/-/CCUWjMVBWC">ДК ГАЗ</a></li>
+					<li class="small">
+						<p class="contacts-info">Россия</pp>
+					</li>
+					<li class="small">
+						<p class="contacts-info">Нижний Новгород</p>
+					</li>
+					<li class="small">
+						<p class="contacts-info">ул. Героя Смирнова, 12</p>
+					</li>
+					<li class="small">
+						<p class="contacts-info"><a class="contacts-info" href="https://yandex.ru/maps/-/CCUWjMVBWC">ДК ГАЗ</a></p>
+					</li>
 				</ul>
 			</div>
 			<div class="soc">
 				<p class="title-description-heading">Социальные сети</p>
 				<ul>
-					<li><a href="">Pinterest</a></li>
-					<li><a href="">Telegram</a></li>
-					<li><a href="">Instagram</a></li>
+					<li>
+						<p class="contacts-info"><a class="contacts-info" href="#">Pinterest</a></p>
+					</li>
+					<li>
+						<p class="contacts-info"><a class="contacts-info" href="#">Telegram</a></p>
+					</li>
+					<li>
+						<p class="contacts-info"><a class="contacts-info" href="#">Instagram</a></p>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -733,13 +928,17 @@
 			<div class="footeer">
 				<p class="copyright">Copyright © 2023 RimmaDesign</p>
 				<a class="politics" href="">Политика конфиденциальности</a>
-				<a class="offer" href="busi-docs\Договор_RimmaDesign.pdf">Мой договор</a>
+				<a class="offer" href="docs\Договор_RimmaDesign.pdf">Мой договор</a>
 			</div>
 		</div>
 	</footer>
 
-	<script src="js/carouselfunct.js"></script>
-	<script src="js/carouselopen.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+	<script src="js/mailerform.js"></script>
+	<script src="js/priceclick.js"></script>
+	<script src="js/stepsact.js"></script>
+	<script src="js/navhamburger.js"></script>
+	<script src="js/carouselmodal.js"></script>
 	<script src="js\pricing.js"></script>
 	<script src="js\popupmain.js"></script>
 	<script src="js\scrollup.js"></script>

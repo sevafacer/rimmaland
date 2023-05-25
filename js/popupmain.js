@@ -1,31 +1,33 @@
-const modal = document.getElementById("call_me");
+const modalcall = document.getElementById("call_me");
 const btn = document.getElementById("main-button");
-const close = document.querySelector(".close");
+const closecall = document.getElementById("callclose");
 
 btn.addEventListener("click", () => {
-  modal.style.display = "block";
-  document.body.style.overflow = "hidden";
+  opencallPopup();
 });
 
-if (close) {
-  close.addEventListener("click", () => {
-    closePopup();
-  });
-}
+modalcall.addEventListener("click", (event) => {
+  if (event.target === modalcall ) {
+    closecallPopup();
+  }
+});
 
+closecall.addEventListener("click", ()=>{
+  closecallPopup();
+}
+)
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
-    closePopup();
+    closecallPopup();
   }
 });
 
-function closePopup() {
-  modal.style.display = "none";
-  document.body.style.overflow = "initial";
+function opencallPopup() {
+  modalcall.style.display = "block";
+  document.body.style.overflow = "hidden";
 }
 
-window.addEventListener("click", (event) => {
-  if (event.target === modal) {
-    closePopup();
-  }
-});
+function closecallPopup() {
+  modalcall.style.display = "none";
+  document.body.style.overflow = "initial";
+}
