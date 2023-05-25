@@ -1439,7 +1439,7 @@ footer hr {
 
 	/* ABOUT */
 	.about {
-		margin-top: 2rem;
+		margin-top: 10rem;
 		display: grid;
 		grid-template-rows: 1fr;
 		width: 100%;
