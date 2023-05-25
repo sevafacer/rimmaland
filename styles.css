@@ -1439,6 +1439,7 @@ footer hr {
 
 	/* ABOUT */
 	.about {
+		margin: 0;
 		margin-top: 10rem;
 		display: grid;
 		grid-template-rows: 1fr;
@@ -1478,7 +1479,7 @@ footer hr {
 	}
 
 	.pint {
-		margin: 3rem;
+		margin: 3rem 0;
 	}
 
 	/* PRICE */
