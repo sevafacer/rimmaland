@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const minusSlide = (modal) => {
     const slides = Array.from(modal.querySelectorAll('.slider-slide'));
-    const activeIndex = slides.findIndex((slide) => slide.classList.contains('active'));
+    const activeIndex = slides.findIndex(slide => slide.classList.contains('active'));
     const previousIndex = (activeIndex - 1 + slides.length) % slides.length;
     slides[activeIndex].classList.remove('active');
     slides[previousIndex].classList.add('active');
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const plusSlide = (modal) => {
     const slides = Array.from(modal.querySelectorAll('.slider-slide'));
-    const activeIndex = slides.findIndex((slide) => slide.classList.contains('active'));
+    const activeIndex = slides.findIndex(slide => slide.classList.contains('active'));
     const nextIndex = (activeIndex + 1) % slides.length;
     slides[activeIndex].classList.remove('active');
     slides[nextIndex].classList.add('active');
@@ -124,8 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = modal.querySelector('.portfolio__carousel-next');
     const dotButtons = Array.from(modal.querySelectorAll('.slider__dot'));
 
-    prevButton?.addEventListener('click', handlePrevButtonClick, { passive: true });
-    nextButton?.addEventListener('click', handleNextButtonClick, { passive: true });
+    prevButton?.addEventListener('click', handlePrevButtonClick);
+    nextButton?.addEventListener('click', handleNextButtonClick);
 
     dotButtons.forEach((dot, dotIndex) => {
       dot.addEventListener('click', () => {
@@ -133,9 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    modal.addEventListener('touchstart', handleModalTouchStart, { passive: true });
-    modal.addEventListener('touchmove', handleModalTouchMove, { passive: true });
-    modal.addEventListener('touchend', handleModalTouchEnd, { passive: true });
+    modal.addEventListener('touchstart', handleModalTouchStart);
+    modal.addEventListener('touchmove', handleModalTouchMove);
+    modal.addEventListener('touchend', handleModalTouchEnd);
   });
 
   const projectButtons = Array.from(document.querySelectorAll('.project'));
@@ -147,10 +147,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   closeButtons.forEach((button) => {
-    button.addEventListener('click', handleCloseButtonClick, { passive: true });
-    button.addEventListener('touchend', handleCloseButtonClick, { passive: true });
+    button.addEventListener('click', handleCloseButtonClick);
+    button.addEventListener('touchend', handleCloseButtonClick);
   });
 
-  window.addEventListener('click', handleOutsideClick, { passive: true });
-  document.addEventListener('keydown', handleKeyDown, { passive: true });
-}, { passive: true });
+  window.addEventListener('click', handleOutsideClick);
+  document.addEventListener('keydown', handleKeyDown);
+});
