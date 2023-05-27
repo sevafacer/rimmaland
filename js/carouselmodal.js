@@ -94,13 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const handleCloseButtonClick = () => {
     closeModal();
-    history.back();
   };
 
   const handleOutsideClick = (event) => {
     if (event.target.classList.contains('portfolio__modal')) {
       closeModal();
-      history.back();
     }
   };
 
@@ -118,7 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } else if (e.key === 'Escape') {
       closeModal();
-      history.back();
     }
   };
 
@@ -140,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.addEventListener('touchmove', handleModalTouchMove, { passive: true });
     modal.addEventListener('touchend', handleModalTouchEnd, { passive: true });
   });
+
   const projectButtons = Array.from(document.querySelectorAll('.project'));
 
   projectButtons.forEach((button, index) => {
@@ -149,10 +147,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   closeButtons.forEach((button) => {
-    button.addEventListener('click', handleCloseButtonClick,{passive: true});
-    button.addEventListener('touchend', handleCloseButtonClick,{passive: true});
+    button.addEventListener('click', handleCloseButtonClick, { passive: true });
+    button.addEventListener('touchend', handleCloseButtonClick, { passive: true });
   });
 
-  window.addEventListener('click', handleOutsideClick,{passive: true});
-  document.addEventListener('keydown', handleKeyDown,{passive: true});
-},{passive: true});
+  window.addEventListener('click', handleOutsideClick, { passive: true });
+  document.addEventListener('keydown', handleKeyDown, { passive: true });
+}, { passive: true });
