@@ -1,4 +1,5 @@
 # Just My First Landing Page :\
 ## For RimmaDesign
 
-![127 0 0 1_5500_ (1)](https://github.com/sevafacer/rimmaland/assets/72393870/9b7e4368-5f02-4203-8f22-6edc12acb90e)
+![sevafacer github io_rimmaland_](https://github.com/sevafacer/rimmaland/assets/72393870/99404bde-caf4-4758-b56e-7e37635d1d9a)
+
