@@ -133,9 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    modal.addEventListener('touchstart', handleModalTouchStart);
-    modal.addEventListener('touchmove', handleModalTouchMove);
-    modal.addEventListener('touchend', handleModalTouchEnd);
+    modal.addEventListener('touchstart', handleModalTouchStart, {passive: true});
+    modal.addEventListener('touchmove', handleModalTouchMove, {passive: true});
+    modal.addEventListener('touchend', handleModalTouchEnd, {passive: true});
   });
 
   const projectButtons = Array.from(document.querySelectorAll('.project'));

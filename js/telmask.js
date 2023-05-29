@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var phoneInputs = document.querySelectorAll('input[data-tel-input]');
   
     var getInputNumbersValue = function (input) {
-        // Return stripped input value — just numbers
         return input.value.replace(/\D/g, '');
     }
   
@@ -13,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (pasted) {
             var pastedText = pasted.getData('Text');
             if (/\D/g.test(pastedText)) {
-                // Attempt to paste non-numeric symbol — remove all non-numeric symbols,
-                // formatting will be in onPhoneInput handler
                 input.value = inputNumbersValue;
                 return;
             }
@@ -32,9 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
   
         if (input.value.length != selectionStart) {
-            // Editing in the middle of input, not last symbol
             if (e.data && /\D/g.test(e.data)) {
-                // Attempt to input non-numeric symbol
                 input.value = inputNumbersValue;
             }
             return;
@@ -62,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
         input.value = formattedInputValue;
     }
     var onPhoneKeyDown = function (e) {
-        // Clear input after remove last symbol
         var inputValue = e.target.value.replace(/\D/g, '');
         if (e.keyCode == 8 && inputValue.length == 1) {
             e.target.value = "";
