@@ -1,0 +1,19 @@
+User-agent: *
+
+Allow: /images/
+Allow: /js/
+Allow: /css/
+
+User-agent: Googlebot
+
+Allow: /
+Allow: /js/
+Allow: /css/
+
+User-agent: Yandex
+
+Allow: /images/
+Allow: /js/
+Allow: /css/
+
+Sitemap: https://rimmadesign.ru/sitemap1.xml
